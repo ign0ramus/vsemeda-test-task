@@ -1,0 +1,17 @@
+@import '../../scss/functions.scss';
+
+.container {
+	height: rem(89px);
+	display: flex;
+	align-items: center;
+	margin-left: rem(30px);
+	margin-right: rem(32px);
+
+	.iconContainer {
+		width: 100%;
+		max-width: rem(158px);
+		svg {
+			width: 100%;
+		}
+	}
+}

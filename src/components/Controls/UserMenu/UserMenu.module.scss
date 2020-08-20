@@ -1,0 +1,40 @@
+@import '../../../scss/functions.scss';
+
+.container {
+	position: absolute;
+	width: rem(236px);
+	height: rem(246px);
+	box-shadow: 2px 3px 30px rgba(0, 0, 0, 0.08);
+	border-radius: 0px 0px rem(10px) rem(10px);
+	top: 100%;
+	left: -80%;
+	font-weight: 600;
+	font-size: rem(16px);
+
+	.menuItems {
+		width: 100%;
+		border-bottom: 1px solid #c4c4c4;
+		margin-top: rem(27px);
+    }
+
+	.menuItem,
+	.logout {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		margin-left: rem(28px);
+		margin-bottom: rem(25px);
+
+		svg {
+			margin-right: rem(12px);
+		}
+	}
+
+	.logout {
+		margin-top: rem(23px);
+
+		svg {
+			margin-right: rem(14px);
+		}
+	}
+}

@@ -1,0 +1,14 @@
+@import './scss/functions.scss';
+@import './scss/fonts.scss';
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	max-width: rem(1280px);
+	margin: 0 auto;
+	font-family: 'Proxima Nova', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

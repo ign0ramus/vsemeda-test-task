@@ -1,0 +1,100 @@
+@import '../../scss/functions.scss';
+
+.container {
+	box-shadow: 2px 6px 20px rgba(119, 119, 119, 0.18);
+	overflow: hidden;
+	border-radius: rem(10px);
+	max-width: rem(603px);
+	width: 100%;
+	height: rem(300px);
+	margin: rem(5px);
+	margin-bottom: rem(10px);
+
+	.imgContainer {
+		width: 100%;
+		height: rem(220px);
+		position: relative;
+
+		.like {
+			position: absolute;
+			right: 5%;
+			bottom: 5%;
+			cursor: pointer;
+			&:hover {
+				svg {
+					fill: #fff;
+				}
+			}
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.footer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.wrapper {
+			width: 90%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.infoContainer {
+				max-width: rem(220px);
+
+				.name {
+					display: block;
+					font-family: 'SF Pro Text';
+					font-weight: 600;
+					font-size: rem(20px);
+					margin-bottom: rem(15px);
+					margin-top: rem(5px);
+				}
+
+				.info {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					.item {
+						display: flex;
+						align-items: center;
+						padding: rem(5px);
+						background-color: #f4f4f4;
+						border-radius: 4px;
+						font-size: rem(12px);
+
+						svg {
+							margin-right: rem(5px);
+						}
+					}
+				}
+			}
+
+			.grade {
+				width: 100%;
+				max-width: rem(50px);
+				height: rem(50px);
+				background: #069852;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				span {
+					font-weight: 600;
+					font-size: rem(24px);
+					text-align: center;
+					color: #fff;
+				}
+			}
+		}
+	}
+}

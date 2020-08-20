@@ -1,0 +1,46 @@
+@import '../../scss/functions.scss';
+
+.checkboxContainer {
+	display: inline-block;
+    vertical-align: middle;
+
+	svg {
+		fill: none;
+		stroke: white;
+        stroke-width: 4px;
+        visibility: hidden;
+        
+        &.checked {
+            visibility: visible;
+        }
+	}
+
+	.hiddenCheckbox {
+		border: 0;
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		white-space: nowrap;
+        width: 1px;
+        visibility: hidden;
+	}
+
+	.checkbox {
+        cursor: pointer;
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		border-radius: 3px;
+		transition: all 150ms;
+        background-color: #fff;
+        border: 1px solid #9ccb3b;
+        
+        &.checked {
+            background-color: #9ccb3b;
+        }
+	}
+}

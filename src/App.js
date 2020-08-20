@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useContext } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { LoginContext } from './context/LoginContext';
+import LoginForm from './components/LoginForm/LoginForm';
+import Header from './components/Header/Header';
+import Menu from './components/Menu/Menu';
+import BestOffers from './components/BestOffers/BestOffers';
+import WeekOffers from './components/WeekOffers/WeekOffers';
+import Restaurants from './components/Restaurants/Restaurants';
+import Footer from './components/Footer/Footer';
+
+import './index.global.scss';
+
+const App = () => {
+	const [isLoggedIn, setIsLoggedIn] = useState(null);
+	const { isLoginFormOpen, closeLoginForm } = useContext(LoginContext);
+
+	const handleLogin = () => {
+		setIsLoggedIn(true);
+		closeLoginForm();
+	};
+
+	const handleLogout = () => {
+		setIsLoggedIn(false);
+	};
+
+	return (
+		<div>
+			<Header isLoggedIn={isLoggedIn} onLogout={handleLogout} />
+			<Menu />
+			<BestOffers />
+			<WeekOffers />
+			<Restaurants />
+			<Footer />
+			{isLoginFormOpen && <LoginForm onLogin={handleLogin} />}
+		</div>
+	);
+};
 
 export default App;

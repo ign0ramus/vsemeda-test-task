@@ -1,0 +1,153 @@
+@import '../../scss/functions.scss';
+
+.container {
+	margin-top: rem(30px);
+	padding: 0 rem(30px);
+
+	.cards {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: rem(24px);
+		overflow-x: auto;
+		padding-bottom: rem(10px);
+		width: 100%;
+		-ms-overflow-style: none; /* IE 11 */
+		scrollbar-width: none; /* Firefox 64 */
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		scroll-behavior: smooth;
+
+		& > div {
+			flex: 0 0 auto;
+			width: rem(400px);
+		}
+	}
+
+	.title {
+		font-weight: 600;
+		font-size: rem(32px);
+		line-height: rem(39px);
+		margin: 0;
+	}
+
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.controls {
+			width: rem(110px);
+			display: flex;
+			justify-content: space-between;
+
+			svg {
+				cursor: pointer;
+
+				&:hover,
+				&:active {
+					filter: brightness(90%);
+				}
+			}
+		}
+
+		.disabled {
+			path {
+				stroke: #c0c0c0;
+			}
+		}
+	}
+
+	.offers {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: rem(30px);
+		width: 100%;
+		overflow-x: auto;
+
+		-ms-overflow-style: none; /* IE 11 */
+		scrollbar-width: none; /* Firefox 64 */
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		scroll-behavior: smooth;
+
+		.offer {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-radius: rem(10px);
+			height: rem(135px);
+			width: rem(400px);
+			margin: 0 rem(5px);
+			flex: 0 0 auto;
+
+			.info {
+				padding-left: rem(15px);
+				.title {
+					display: inline-block;
+					font-family: 'SF Pro Text';
+					font-weight: bold;
+					font-size: rem(20px);
+					padding: 0 rem(13px);
+					background-color: #fff;
+					color: #000;
+					text-align: center;
+					margin-bottom: rem(20px);
+				}
+
+				.text {
+					display: block;
+					font-family: 'SF Pro Text';
+					font-weight: bold;
+					font-size: rem(20px);
+					color: #ffffff;
+					width: rem(156px);
+				}
+			}
+
+			.imgContainer {
+				border-radius: rem(10px);
+				overflow: hidden;
+				img {
+					display: block;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+
+		.offer1 {
+			background-color: #6b4c9f;
+		}
+
+		.offer2 {
+			align-items: flex-start;
+			background-color: #ffd130;
+			.info {
+				padding-top: rem(15px);
+
+				.title {
+					margin-bottom: rem(5px);
+				}
+
+				.text {
+					width: rem(290px);
+					color: #000;
+				}
+			}
+
+			.imgContainer {
+				margin-top: rem(9px);
+				margin-right: rem(20px);
+			}
+		}
+
+		.offer3 {
+			background-color: #f58220;
+		}
+	}
+}
