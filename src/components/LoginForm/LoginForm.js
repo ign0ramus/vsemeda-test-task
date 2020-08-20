@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 
 import { LoginContext } from '../../context/LoginContext';
 import Input from '../Input/Input';
